@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding-right: 80px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.main .nav{
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 15px 0;
+    left: 0px;
+}
+.main-container{
+    /* width: 50vw; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.greet{
+    /* margin: auto; */
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* display: none; */
+}
+.greet img{
+    width: 40px;
+    margin: 8px;
+}
+.cards{
+    width: 50.7vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    /* grid-template-columns: 1fr; */
+    grid-gap: 0.5rem;
+}
+.card{
+    height: 66px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    outline: none;
+    border: #e7e5e5 2px solid;
+    /* width: auto; */
+    height: 75px;
+    cursor: pointer;
+}
+.p1{
+    font-size: 12px;
+    font-weight: 500;
+}
+.p2{
+    font-size: 11px;
+    font-weight: 400;
+    color: #878686;
+}
+.input{
+    bottom: 80px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 51vw;
+    height: 46px;
+    border: #e7e5e5 2px solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: absolute;
+    bottom: -5px;
+}
+.input-box input{
+    padding: 0 20px;
+    margin-left: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.input-box img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+.important-msg{
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    color:#878686;
+    margin: 5px;
+}
+.result{
+    max-width: 51vw;
+    padding: 0 5%;
+    max-height: 70vh;
+    position: relative;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.result-title{
+    /* margin: 40px 0px; */
+    margin-left: 5px;
+    display: flex;
+    align-items: start;
+    gap: 25px;
+}
+.result-title img{
+    width: 20px;
+}
+.result-data{
+    margin: 20px 0px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.result-data img{
+    width: 30px;
+}
+.result_p1{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.result_p2{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #878686;
+    background: linear-gradient(to right, #a2a1a1,#ffff,#a2a1a1);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+.signup-btn{
+    display: none;
+}
+.empty{
+    display: none;
+}
+@keyframes loader{
+    0%{
+        background-position: -800px 0;
+    }
+    100%{
+        background-position: 800px 0;
+    }
+}
+@media screen and (max-width:1000px){
+    .main{
+        z-index: 1;
+        width: 100vw;
+        position: absolute;
+        padding: 0;
+        /* position: fixed; */
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: grey 0.1px solid ;
+        /* outline: #878686; */
+        height: 45px;
+    }
+    .nav p{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .card3,.card4{
+        display: none;
+    }
+    .input-box{
+        width: 95%;
+    }
+    .input-box input{
+        padding: 0 15px;
+        margin: 0;
+        width: 100%;
+    }
+    .cards{
+        width: 95%;
+    }
+    .result{
+        max-width: 1000px;
+    }
+    .signup-btn{
+        display: block;
+        margin: 5px;
+        width: 80px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .empty{
+        display: block;
+        width: 80px;
+    }
+}
+
